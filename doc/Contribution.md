@@ -11,7 +11,7 @@ Use the following format:
 `type` can be:
 
 - `feat`: anything related to feature - adding features or enhancing existing features
-- `bug`: anything related to bug fixes
+- `fix`: anything related to bug fixes
 - `refactor`: any code changes that do not result in any change in behaviour
 - `doc`: self explanatory, generally any changes to md files, diagrams
 - `chore`: anything that does not fall under any of the categories above
