@@ -1,0 +1,35 @@
+{
+  "cli": {
+    "version": ">= 3.15.0"
+  },
+  "build": {
+    "development": {
+      "node": "18.16.0",
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "node": "18.16.0",
+      "distribution": "internal"
+    },
+    "release": {
+      "node": "18.16.0",
+      "distribution": "store",
+      "ios": {
+        "image": "latest",
+        "releaseChannel": "default"
+      },
+      "android": {
+        "image": "latest",
+        "releaseChannel": "default"
+      }
+    },
+    "production": {
+      "node": "18.16.0",
+      "distribution": "store"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "SoulScribe",
+    "slug": "SoulScribe",
+    "version": "1.0.5",
+    "orientation": "portrait",
+    "icon": "./src/assets/low_poly_book_midjourney.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "buildNumber": "10",
+      "bundleIdentifier": "com.soulscribe.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "versionCode": 6,
+      "softwareKeyboardLayoutMode": "pan",
+      "package": "com.soulscribe.SoulScribe"
+    },
+    "web": {
+      "favicon": "./src/assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7822396f-4727-4351-8315-fd243486a463"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7822396f-4727-4351-8315-fd243486a463"
+    },
+    "production": {
+      "autoIncrement": true
+    }
+  }
+}
