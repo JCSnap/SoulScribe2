@@ -35,12 +35,11 @@ const HomeScreen = ({ navigation, route }) => {
   const { user } = useAuthentication();
   const dispatch = useDispatch();
   const [isFirstTime, setIsFirstTime] = useState(false);
-  const [openOnboarding, setOpenOnboarding] = useState(false);
+  const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
 
   const username = useSelector((state) => state.profile.username);
-  console.log(username);
-  const loaded = useSelector((state) => state.profile.loaded);
-  const chatOpen = useSelector((state) => state.chatbot.chatOpen);
+  const isLoaded = useSelector((state) => state.profile.loaded);
+  const isChatOpen = useSelector((state) => state.chatbot.chatOpen);
 
   const checkFirstTime = async () => {
     const userData = await getUserData();
@@ -50,11 +49,11 @@ const HomeScreen = ({ navigation, route }) => {
   };
 
   const toggleOnboarding = () => {
-    setOpenOnboarding(!openOnboarding);
+    setIsOnboardingOpen(!isOnboardingOpen);
   };
 
   const getProfile = async () => {
-    if (!loaded) {
+    if (!isLoaded) {
       const userData = await getUserData();
       const username = await userData.getUsername();
       const gender = await userData.getGender();
@@ -77,7 +76,7 @@ const HomeScreen = ({ navigation, route }) => {
   useEffect(() => {
     checkFirstTime();
     getProfile();
-  }, [loaded]);
+  }, [isLoaded]);
 
   useEffect(() => {
     if (route.params?.showToast) {
@@ -107,14 +106,14 @@ const HomeScreen = ({ navigation, route }) => {
 
   return (
     <DefaultView>
-      {openOnboarding && <OnboardingModal closeModal={toggleOnboarding} />}
+      {isOnboardingOpen && <OnboardingModal closeModal={toggleOnboarding} />}
       {isFirstTime && (
         <SetUp onSave={checkFirstTime} toggleOnboarding={toggleOnboarding} />
       )}
       <View className="absolute z-20">
         <Toast />
       </View>
-      {!chatOpen && <DraggableChatBot />}
+      {!isChatOpen && <DraggableChatBot />}
       <TotalEntries />
       <CustomizableHome />
       <Text className=" text-lg font-bold h-7">Welcome {username}!</Text>
@@ -123,7 +122,7 @@ const HomeScreen = ({ navigation, route }) => {
           navigation.navigate("Write");
         }}
       />
-      {chatOpen && <ChatInterface />}
+      {isChatOpen && <ChatInterface />}
       <Navbar navigation={navigation} />
     </DefaultView>
   );
