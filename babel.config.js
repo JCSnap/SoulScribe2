@@ -17,6 +17,15 @@ module.exports = function (api) {
       ["@babel/plugin-transform-private-property-in-object", { loose: true }],
       "nativewind/babel",
       "react-native-reanimated/plugin",
+      [
+        "module-resolver",
+        {
+          root: ["./"],
+          alias: {
+            src: "./src",
+          },
+        },
+      ],
     ],
   };
 };
