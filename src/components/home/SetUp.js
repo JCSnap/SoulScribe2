@@ -3,7 +3,7 @@
  */
 
 import React, { useState } from "react";
-import ArtStyleCarousel from "./ArtStyleCarousel";
+import ArtStyleCarousel from "../ArtStyleCarousel";
 import {
   Image,
   View,
@@ -14,8 +14,8 @@ import {
   Dimensions,
   Alert,
 } from "react-native";
-import { SaveButton } from "./Button";
-import setUserData from "../utils/setUserData";
+import { SaveButton } from "../Button";
+import setUserData from "../../utils/setUserData";
 
 const SetUp = ({ onSave, toggleOnboarding }) => {
   const [value, setValue] = useState({
@@ -92,7 +92,7 @@ const SetUp = ({ onSave, toggleOnboarding }) => {
               >
                 <Text className="">Male</Text>
                 <Image
-                  source={require("../assets/customizable_home/low_poly_boy_bag.png")}
+                  source={require("src/assets/customizable_home/low_poly_boy_bag.png")}
                   className="w-full h-full"
                 />
               </TouchableOpacity>
@@ -104,7 +104,7 @@ const SetUp = ({ onSave, toggleOnboarding }) => {
               >
                 <Text className="">Female</Text>
                 <Image
-                  source={require("../assets/customizable_home/low_poly_girl_umbrella.png")}
+                  source={require("src/assets/customizable_home/low_poly_girl_umbrella.png")}
                   className="w-full h-full"
                 />
               </TouchableOpacity>

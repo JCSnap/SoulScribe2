@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Image } from "react-native";
-import { CUSTOMIZABLE_IMAGES } from "../constants/Shop";
+import { CUSTOMIZABLE_IMAGES } from "src/constants/Shop";
 import { onSnapshot } from "firebase/firestore";
-import getUserData from "../utils/getUserData";
+import getUserData from "src/utils/getUserData";
 
 /**
  * Customizable homepage.

@@ -1,7 +1,6 @@
 import Carousel from "react-native-snap-carousel";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { View, Text, Image, TouchableOpacity, Dimensions } from "react-native";
-import { DefaultView } from "./View";
 
 const OnboardingModal = (props) => {
   const carouselRef = useRef(null);
@@ -19,31 +18,31 @@ const OnboardingModal = (props) => {
     {
       title: "Write your first entry!",
       description: "Press the 'Write' button to get started.",
-      image: require("../assets/onboarding/homescreen.png"),
+      image: require("src/assets/onboarding/homescreen.png"),
     },
     {
       title: "Save or Test!",
       description:
         "Save your entry by pressing the 'Done' button. You can also test the AI recap by pressing the 'Test Recap' button. Note that pressing 'Test Recap' will not save your entry.",
-      image: require("../assets/onboarding/write.png"),
+      image: require("src/assets/onboarding/write.png"),
     },
     {
       title: "Select your art style!",
       description:
         "Choose your art style by going to your profile page. This will decide the art that is used to generate your recap!",
-      image: require("../assets/onboarding/items.png"),
+      image: require("src/assets/onboarding/items.png"),
     },
     {
       title: "View your recap!",
       description:
         "A summary and art will be generated at the end of every week based on your entries. You can view them at the 'Recap' page!",
-      image: require("../assets/onboarding/recap.png"),
+      image: require("src/assets/onboarding/recap.png"),
     },
     {
       title: "Earn coins!",
       description:
         "Earn coins by journaling and doing it consistently! Use them to buy items and art styles! Consult the chatbot if you have more questions.",
-      image: require("../assets/onboarding/chatbot.png"),
+      image: require("src/assets/onboarding/chatbot.png"),
     },
   ]);
 

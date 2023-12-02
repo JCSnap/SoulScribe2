@@ -8,15 +8,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { useAuthentication } from "../utils/hooks/useAuthentication";
 import { WriteButton } from "../components/Button";
 import Navbar from "../components/navbar/Navbar";
-import CustomizableHome from "../components/CustomizableHome";
-import TotalEntries from "../components/TotalEntries";
+import CustomizableHome from "../components/home/CustomizableHome";
+import TotalEntries from "../components/home/TotalEntries";
 import { Text, View, Dimensions } from "react-native";
 import { DefaultView } from "../components/View";
 import Toast from "react-native-toast-message";
 import DraggableChatBot from "../components/ChatBot";
-import SetUp from "../components/SetUp";
+import SetUp from "../components/home/SetUp";
 import getUserData from "../utils/getUserData";
-import OnboardingModal from "../components/OnboardingModal";
+import OnboardingModal from "../components/home/OnboardingModal";
 import { ART_STYLES } from "../constants/Shop";
 import {
   changeEntries,
